@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="judul">
+        <h1>{{ message }}</h1>
+    </div>
+    <div class="kelas">
+        {% if image_url %}
+        <img class="hasil" src="{{ image_url }}" alt="Result Image">
+        {% endif %}
+    </div>
+    <div class="tombol">
+        <a class="back" href="/">Back to Home</a>
+    </div>
+  </body>
+</html>
