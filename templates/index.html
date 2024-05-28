@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Watermark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <h1>Image Watermarking</h1>
+        </div>
+        <div class="gambar">
+            <img src="{{ url_for('static', filename='LOGO-UNSIL-300x300.png') }}" alt="logo">
+        </div>
+    </header>
+
+    <section class="embed">
+        <div class="judul">
+            <h1>Embed Watermark</h1>
+        </div>
+        <div class="form">
+            <form action="/embed" method="post" enctype="multipart/form-data">
+                <div class="image">
+                    <label for="image">Upload Image</label>
+                    <input type="file" name="image" id="image" required>
+                </div>
+
+                    <img id="imagePreview" class="preview" alt="Image Preview">
+
+                <div class="watermark">
+                    <label for="watermark">Upload Watermark</label>
+                    <input type="file" name="watermark" id="watermark" required>
+                </div>
+
+                    <img id="watermarkPreview" class="preview" alt="Watermark Preview">
+
+                <div class="key">
+                    <label class="enter" for="secret_key">Enter Secret Key</label>
+                    <input class="secret" type="text" name="secret_key" id="secret_key" required>
+                </div>
+              <div class="btn">
+                  <button type="submit">Embed Watermark</button>
+              </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="ekstrak">
+        <div class="judul">
+            <h1>Extract Watermark</h1>
+        </div>
+        <div class="form">
+            <form action="/extract" method="post" enctype="multipart/form-data">
+                <div class="water">
+                    <label for="watermarked_image">Upload Watermarked Image</label>
+                    <input type="file" name="watermarked_image" id="watermarked_image" required>
+                </div>
+                    <img id="watermarkedImagePreview" class="preview" alt="Watermarked Image Preview">
+                <div class="ori">
+                    <label for="original_image">Upload Original Image</label>
+                    <input type="file" name="original_image" id="original_image" required>
+                </div>
+                    <img id="originalImagePreview" class="preview" alt="Original Image Preview">
+                <div class="key">
+                    <label class="enter" for="secret_key">Enter Secret Key</label>
+                    <input class="secret" type="text" name="secret_key" id="secret_key" required>
+                </div>
+              <div class="btn">
+                  <button type="submit">Extract Watermark</button>
+              </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Function to preview image
+        function previewImage(input, previewId) {
+            const file = input.files[0];
+            const preview = document.getElementById(previewId);
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Add event listeners to file inputs
+        document.getElementById('image').addEventListener('change', function() {
+            previewImage(this, 'imagePreview');
+        });
+
+        document.getElementById('watermark').addEventListener('change', function() {
+            previewImage(this, 'watermarkPreview');
+        });
+
+        document.getElementById('watermarked_image').addEventListener('change', function() {
+            previewImage(this, 'watermarkedImagePreview');
+        });
+
+        document.getElementById('original_image').addEventListener('change', function() {
+            previewImage(this, 'originalImagePreview');
+        });
+    </script>
+  </body>
+</html>

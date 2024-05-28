@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ffff;
+    color: #2D2D2D;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: white;
+    align-items: center;
+    z-index: 100;
+}
+
+.gambar img {
+    width: 50px;
+    height: 50px;
+}
+
+section {
+    min-height: 100%;
+    padding: 10rem 9% 2rem;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    width: 15rem;
+    height: 100%;
+    background: #9CD9AE;
+    border-radius: 10px;
+    border: .8rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: #4CAF50;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: all .2s ease-in;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hasil {
+    width: 550px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.image {
+    width: 190px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.image:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.watermark {
+    width: 190px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.watermark:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.water {
+    width: 190px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.water:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.ori {
+    width: 190px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.ori:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.secret {
+    padding: 10px 20px;
+    background-color: #9CD9AE;
+    border-radius: 10px;
+    color: #ffff;
+    width: 265px;
+}
+
+.enter {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.kelas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    margin-left: 50px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.back:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.tombol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.key {
+    margin-top: 30px;
+}
+
+form {
+    text-align: center;
+}
+
+.preview {
+    display: none;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
